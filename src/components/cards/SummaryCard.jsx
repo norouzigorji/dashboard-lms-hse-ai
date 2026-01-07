@@ -42,7 +42,7 @@ function SummaryCard({ title, value, icon, color, delay = 0 }) {
       transition={{ duration: 0.4, delay }}
       whileHover={{ scale: 1.02, y: -4 }}
       className={`
-        glass-card rounded-2xl p-8
+        glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8
         bg-gradient-to-br ${colorClass.gradient}
         border-2 ${colorClass.border}
         ${colorClass.shadow}
@@ -50,12 +50,12 @@ function SummaryCard({ title, value, icon, color, delay = 0 }) {
       `}
     >
       <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <p className="text-gray-300 text-sm mb-3 font-medium">{title}</p>
-          <p className="text-4xl md:text-5xl font-extrabold text-white">{value}</p>
+        <div className="flex-1 min-w-0">
+          <p className="text-gray-300 text-xs md:text-sm mb-2 md:mb-3 font-medium truncate">{title}</p>
+          <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white">{value}</p>
         </div>
-        <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 ml-4">
-          <Icon className="w-7 h-7 text-white" />
+        <div className="w-10 h-10 md:w-12 md:h-14 lg:w-14 lg:h-14 rounded-lg md:rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 ml-2 md:ml-4 flex-shrink-0">
+          <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
         </div>
       </div>
     </motion.div>

@@ -45,8 +45,8 @@ function ContractorLeague() {
   }
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-display mb-8">رتبه‌بندی پیمانکاران (Contractor League)</h1>
+    <div className="space-y-4 md:space-y-6 lg:space-y-8">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-4 md:mb-6 lg:mb-8">رتبه‌بندی پیمانکاران (Contractor League)</h1>
 
       {/* Leaderboard */}
       <Leaderboard
@@ -56,7 +56,7 @@ function ContractorLeague() {
       />
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
         {/* Radar Chart */}
         <RadarChart contractor={selectedContractor} />
 

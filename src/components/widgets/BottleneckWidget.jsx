@@ -12,9 +12,9 @@ function BottleneckWidget({ bottlenecks }) {
   }
 
   return (
-    <div className="glass-card rounded-2xl p-8 animate-fade-in border-2 border-yellow-500/30">
-      <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-        <AlertCircle className="w-5 h-5 text-yellow-500" />
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 animate-fade-in border-2 border-yellow-500/30">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6 flex items-center gap-2">
+        <AlertCircle className="w-4 h-4 md:w-5 md:h-5 text-yellow-500" />
         هشدار گلوگاه‌ها
       </h3>
       <div className="space-y-3">

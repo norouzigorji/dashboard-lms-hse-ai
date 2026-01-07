@@ -50,9 +50,9 @@ function DonutChart({ data }) {
   }
 
   return (
-    <div className="glass-strong rounded-xl p-6 animate-fade-in">
-      <h3 className="text-lg font-bold text-white mb-4">تحلیل ریشه‌ای</h3>
-      <div className="h-64">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4">تحلیل ریشه‌ای</h3>
+      <div className="h-48 md:h-56 lg:h-64">
         <Doughnut data={chartData} options={options} />
       </div>
       <div className="mt-4 space-y-2">

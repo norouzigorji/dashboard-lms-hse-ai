@@ -53,23 +53,25 @@ function Dashboard() {
   }
 
   return (
-    <div className="space-y-8">
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-display">داشبورد فرماندهی</h1>
-        <div className="flex items-center gap-4">
+    <div className="space-y-4 md:space-y-6 lg:space-y-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 mb-4 md:mb-6 lg:mb-8">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white">داشبورد فرماندهی</h1>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 md:gap-4">
           <TimeRangeFilter value={timeRange} onChange={setTimeRange} />
           <ActionButton
             variant="primary"
             icon={FileText}
             onClick={() => setIsReportModalOpen(true)}
+            className="w-full sm:w-auto"
           >
-            ایجاد گزارش مدیریتی
+            <span className="hidden sm:inline">ایجاد گزارش مدیریتی</span>
+            <span className="sm:hidden">گزارش</span>
           </ActionButton>
         </div>
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
         {data.summaryCards.map((card, index) => (
           <SummaryCard
             key={card.id}
@@ -96,11 +98,11 @@ function Dashboard() {
       </AnimatePresence>
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
         {/* World Map Placeholder */}
-        <div className="glass-card rounded-2xl p-8 animate-fade-in">
-          <h3 className="text-xl font-bold text-white mb-6">روند تطبیقی</h3>
-          <div className="h-64 flex items-center justify-center text-gray-400">
+        <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 animate-fade-in">
+          <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">روند تطبیقی</h3>
+          <div className="h-48 md:h-56 lg:h-64 flex items-center justify-center text-gray-400 text-xs md:text-sm text-center px-4">
             <p>نقشه جهانی (نمایش داده‌های جغرافیایی)</p>
           </div>
         </div>

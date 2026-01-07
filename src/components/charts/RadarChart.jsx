@@ -107,7 +107,7 @@ function RadarChart({ contractor }) {
   }
 
   return (
-    <div className="glass-strong rounded-xl p-6 h-96 animate-fade-in">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 h-64 md:h-80 lg:h-96 animate-fade-in">
       <Radar data={chartData} options={options} />
     </div>
   )

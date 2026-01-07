@@ -36,18 +36,19 @@ function ProcessTable({ processes: initialProcesses }) {
   }
 
   return (
-    <div className="glass-card rounded-2xl p-8 animate-fade-in">
-      <h3 className="text-xl font-bold text-white mb-6">جدول فرایندهای زنده</h3>
-      <div className="overflow-x-auto">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">جدول فرایندهای زنده</h3>
+      <div className="overflow-x-auto -mx-4 md:mx-0">
+        <div className="min-w-full px-4 md:px-0">
         <table className="w-full">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">شماره فرم</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">نوع فرایند</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">واحد درخواست کننده</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">تاریخ ثبت</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">وضعیت</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">عملیات</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">شماره فرم</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300 hidden md:table-cell">نوع فرایند</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300 hidden lg:table-cell">واحد درخواست کننده</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300 hidden sm:table-cell">تاریخ ثبت</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">وضعیت</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">عملیات</th>
             </tr>
           </thead>
           <tbody>
@@ -61,30 +62,30 @@ function ProcessTable({ processes: initialProcesses }) {
                   index % 2 === 0 ? 'bg-white/2' : ''
                 }`}
               >
-                <td className="py-3 px-4 text-sm text-white">{process.formNumber}</td>
-                <td className="py-3 px-4 text-sm text-gray-300">{process.processType}</td>
-                <td className="py-3 px-4 text-sm text-gray-300">{process.requestingUnit}</td>
-                <td className="py-3 px-4 text-sm text-gray-300">{process.registrationDate}</td>
-                <td className="py-3 px-4 text-sm">{getStatusBadge(process.status)}</td>
-                <td className="py-3 px-4">
-                  <div className="flex items-center gap-2 justify-end">
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-white font-medium">{process.formNumber}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-gray-300 hidden md:table-cell">{process.processType}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-gray-300 hidden lg:table-cell">{process.requestingUnit}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-gray-300 hidden sm:table-cell">{process.registrationDate}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm">{getStatusBadge(process.status)}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4">
+                  <div className="flex items-center gap-1 md:gap-2 justify-end">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => handleApprove(process.id)}
                       disabled={process.status === 'تایید شده'}
-                      className="p-2 rounded-lg bg-green-500/20 hover:bg-green-500/30 text-green-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      className="p-1.5 md:p-2 rounded-lg bg-green-500/20 hover:bg-green-500/30 text-green-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     >
-                      <CheckCircle2 className="w-4 h-4" />
+                      <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4" />
                     </motion.button>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => handleReject(process.id)}
                       disabled={process.status === 'رد شده'}
-                      className="p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      className="p-1.5 md:p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     >
-                      <XCircle className="w-4 h-4" />
+                      <XCircle className="w-3.5 h-3.5 md:w-4 md:h-4" />
                     </motion.button>
                   </div>
                 </td>
@@ -92,6 +93,7 @@ function ProcessTable({ processes: initialProcesses }) {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   )

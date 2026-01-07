@@ -45,12 +45,12 @@ function GaugeChart({ name, percentage, label }) {
   }
 
   return (
-    <div className="glass-strong rounded-xl p-6 animate-fade-in">
-      <h3 className="text-sm text-gray-300 mb-4 text-center">{label}</h3>
-      <div className="relative h-48 flex items-center justify-center">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 animate-fade-in">
+      <h3 className="text-xs md:text-sm text-gray-300 mb-3 md:mb-4 text-center">{label}</h3>
+      <div className="relative h-32 md:h-40 lg:h-48 flex items-center justify-center">
         <Doughnut data={data} options={options} />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-3xl font-bold" style={{ color }}>
+          <span className="text-2xl md:text-3xl font-bold" style={{ color }}>
             {percentage}%
           </span>
         </div>

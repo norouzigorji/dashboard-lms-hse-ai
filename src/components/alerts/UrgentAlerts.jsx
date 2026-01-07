@@ -2,9 +2,9 @@ import { AlertTriangle } from 'lucide-react'
 
 function UrgentAlerts({ alerts }) {
   return (
-    <div className="glass-strong rounded-xl p-6 animate-fade-in">
-      <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-        <AlertTriangle className="w-5 h-5 text-red-500" />
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-2">
+        <AlertTriangle className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
         هشدارهای فوری
       </h3>
       <div className="space-y-3">

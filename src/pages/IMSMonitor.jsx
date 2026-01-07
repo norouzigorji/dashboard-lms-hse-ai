@@ -20,14 +20,14 @@ function IMSMonitor() {
   }
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-display mb-8">مدیریت فرایندها (IMS)</h1>
+    <div className="space-y-4 md:space-y-6 lg:space-y-8">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-4 md:mb-6 lg:mb-8">مدیریت فرایندها (IMS)</h1>
 
       {/* Process Table */}
       <ProcessTable processes={data.processes} />
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {/* Gauge Charts */}
         {data.isoCompliance.map((iso) => (
           <GaugeChart
@@ -40,7 +40,7 @@ function IMSMonitor() {
       </div>
 
       {/* Bottleneck Widget */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
         <div className="lg:col-span-1">
           <BottleneckWidget bottlenecks={data.bottlenecks} />
         </div>

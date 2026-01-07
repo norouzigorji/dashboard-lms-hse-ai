@@ -46,9 +46,9 @@ function GISMap({ markers, onMarkerStatusChange }) {
   }
 
   return (
-    <div className="glass-card rounded-2xl p-8 animate-fade-in">
-      <h3 className="text-xl font-bold text-white mb-6">منطقه GIS</h3>
-      <div className="h-96 rounded-lg overflow-hidden">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">منطقه GIS</h3>
+      <div className="h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden">
         <MapContainer
           center={center}
           zoom={13}

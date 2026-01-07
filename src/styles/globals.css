@@ -53,11 +53,11 @@
   }
   
   .text-display {
-    @apply text-3xl md:text-4xl font-extrabold text-white;
+    @apply text-2xl md:text-3xl lg:text-4xl font-extrabold text-white;
   }
   
   .text-metric {
-    @apply text-4xl md:text-5xl font-extrabold text-white;
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-white;
   }
   
   .text-muted {
@@ -68,5 +68,35 @@
 /* Leaflet map styles */
 .leaflet-container {
   background: #1a1f3a;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  /* Smaller text on mobile */
+  .text-display {
+    font-size: 1.5rem;
+  }
+  
+  /* Better table scrolling */
+  table {
+    font-size: 0.75rem;
+  }
+  
+  /* Better chart container */
+  .chart-container {
+    min-height: 250px;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Better scrollbar for mobile */
+@media (max-width: 768px) {
+  * {
+    scrollbar-width: thin;
+  }
 }
 

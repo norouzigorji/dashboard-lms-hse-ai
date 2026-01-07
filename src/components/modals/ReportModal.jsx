@@ -31,32 +31,32 @@ function ReportModal({ isOpen, onClose }) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="
-                glass-card rounded-2xl p-8
-                w-full max-w-md
+                glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8
+                w-full max-w-md mx-4
                 transform transition-all
               ">
-                <div className="flex items-center justify-between mb-6">
-                  <Dialog.Title className="text-xl font-bold text-white">
+                <div className="flex items-center justify-between mb-4 md:mb-6">
+                  <Dialog.Title className="text-lg md:text-xl font-bold text-white">
                     گزارش مدیریتی
                   </Dialog.Title>
                   <button
                     onClick={onClose}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-4 h-4 md:w-5 md:h-5" />
                   </button>
                 </div>
 
-                <div className="mb-6">
-                  <p className="text-green-400 font-medium mb-4">
+                <div className="mb-4 md:mb-6">
+                  <p className="text-green-400 font-medium mb-3 md:mb-4 text-sm md:text-base">
                     ✓ گزارش PDF تولید شد
                   </p>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-xs md:text-sm">
                     گزارش مدیریتی با تمام داده‌های انتخاب شده آماده دانلود است.
                   </p>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                   <ActionButton
                     variant="primary"
                     icon={Download}

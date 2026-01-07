@@ -52,18 +52,19 @@ function Leaderboard({ contractors: initialContractors, onSelectContractor, onSc
   }
 
   return (
-    <div className="glass-card rounded-2xl p-8 animate-fade-in">
-      <h3 className="text-xl font-bold text-white mb-6">جدول لیگ پیمانکاران</h3>
-      <div className="overflow-x-auto">
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">جدول لیگ پیمانکاران</h3>
+      <div className="overflow-x-auto -mx-4 md:mx-0">
+        <div className="min-w-full px-4 md:px-0">
         <table className="w-full">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">رتبه</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">نام پیمانکار</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">پروژه‌های فعال / تکمیل</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">امتیاز کل (از ۵)</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">روند</th>
-              <th className="text-right py-3 px-4 text-sm font-medium text-gray-300">عملیات</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">رتبه</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">نام پیمانکار</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300 hidden lg:table-cell">پروژه‌های فعال / تکمیل</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">امتیاز</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300 hidden sm:table-cell">روند</th>
+              <th className="text-right py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-medium text-gray-300">عملیات</th>
             </tr>
           </thead>
           <tbody>
@@ -82,39 +83,39 @@ function Leaderboard({ contractors: initialContractors, onSelectContractor, onSc
                     ${contractor.rank <= 3 ? 'bg-gradient-to-r from-yellow-500/5 to-transparent' : ''}
                   `}
                 >
-                  <td className="py-3 px-4 text-sm">
-                    <div className="flex items-center justify-end gap-2">
-                      {getMedalIcon(contractor.rank)}
-                    </div>
-                  </td>
-                  <td className="py-3 px-4 text-sm text-white font-medium">{contractor.name}</td>
-                  <td className="py-3 px-4 text-sm text-gray-300">
-                    {contractor.activeProjects} / {contractor.completedProjects}
-                  </td>
-                  <td className="py-3 px-4 text-sm">
-                    <motion.span
-                      key={contractor.score}
-                      initial={{ scale: 1.2, color: '#10b981' }}
-                      animate={{ scale: 1, color: '#ffffff' }}
-                      transition={{ duration: 0.3 }}
-                      className="text-white font-bold"
-                    >
-                      {contractor.score.toFixed(1)}
-                    </motion.span>
-                    <span className="text-gray-400"> / 5</span>
-                  </td>
-                  <td className="py-3 px-4 text-sm">
-                    {contractor.trend === 'up' ? (
-                      <TrendingUp className="w-5 h-5 text-green-500" />
-                    ) : (
-                      <TrendingDown className="w-5 h-5 text-red-500" />
-                    )}
-                  </td>
-                  <td className="py-3 px-4 text-sm" onClick={(e) => e.stopPropagation()}>
-                    <Menu as="div" className="relative">
-                      <Menu.Button className="p-2 rounded-lg hover:bg-white/10 transition-colors">
-                        <MoreVertical className="w-4 h-4 text-gray-400" />
-                      </Menu.Button>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm">
+                  <div className="flex items-center justify-end gap-1 md:gap-2">
+                    {getMedalIcon(contractor.rank)}
+                  </div>
+                </td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-white font-medium break-words">{contractor.name}</td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-gray-300 hidden lg:table-cell">
+                  {contractor.activeProjects} / {contractor.completedProjects}
+                </td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm">
+                  <motion.span
+                    key={contractor.score}
+                    initial={{ scale: 1.2, color: '#10b981' }}
+                    animate={{ scale: 1, color: '#ffffff' }}
+                    transition={{ duration: 0.3 }}
+                    className="text-white font-bold"
+                  >
+                    {contractor.score.toFixed(1)}
+                  </motion.span>
+                  <span className="text-gray-400 hidden sm:inline"> / 5</span>
+                </td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm hidden sm:table-cell">
+                  {contractor.trend === 'up' ? (
+                    <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-green-500" />
+                  ) : (
+                    <TrendingDown className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
+                  )}
+                </td>
+                <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm" onClick={(e) => e.stopPropagation()}>
+                  <Menu as="div" className="relative">
+                    <Menu.Button className="p-1.5 md:p-2 rounded-lg hover:bg-white/10 transition-colors">
+                      <MoreVertical className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-400" />
+                    </Menu.Button>
                       <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -164,6 +165,7 @@ function Leaderboard({ contractors: initialContractors, onSelectContractor, onSc
             </AnimatePresence>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   )

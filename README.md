@@ -61,6 +61,21 @@ npm run build
 npm run preview
 ```
 
+### Deploy روی GitHub Pages
+
+پروژه برای استفاده از GitHub Pages پیکربندی شده است:
+
+```bash
+npm run deploy
+```
+
+پس از اجرای دستور بالا:
+1. به تنظیمات ریپوزیتوری در GitHub بروید
+2. بخش **Pages** را انتخاب کنید
+3. در **Build and deployment > Branch**، منبع را به `gh-pages` و فولدر را به `/(root)` تغییر دهید
+4. سایت شما در آدرس زیر در دسترس خواهد بود:
+   - https://norouzigorji.github.io/dashboard-lms-hse-ai
+
 ## ساختار پروژه
 
 ```

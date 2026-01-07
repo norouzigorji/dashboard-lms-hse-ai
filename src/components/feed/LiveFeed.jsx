@@ -45,11 +45,11 @@ function LiveFeed({ feed }) {
   }
 
   return (
-    <div className="glass-strong rounded-xl p-6 animate-fade-in">
-      <h3 className="text-lg font-bold text-white mb-4">فید زنده گزارش‌ها</h3>
+    <div className="glass-card rounded-xl md:rounded-2xl p-4 md:p-6 animate-fade-in">
+      <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">فید زنده گزارش‌ها</h3>
       <div
         ref={feedRef}
-        className="space-y-3 max-h-96 overflow-y-auto pr-2"
+        className="space-y-2 md:space-y-3 max-h-64 md:max-h-80 lg:max-h-96 overflow-y-auto pr-2"
         style={{ scrollbarWidth: 'thin' }}
       >
         {feed.map((item) => (

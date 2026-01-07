@@ -24,16 +24,17 @@ function ActionButton({
       onClick={onClick}
       disabled={disabled}
       className={`
-        px-4 py-2 rounded-lg font-medium
+        px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium
+        text-xs md:text-sm
         transition-all duration-200
-        flex items-center gap-2
+        flex items-center justify-center gap-1.5 md:gap-2
         disabled:opacity-50 disabled:cursor-not-allowed
         ${variants[variant]}
         ${className}
       `}
       {...props}
     >
-      {Icon && <Icon className="w-4 h-4" />}
+      {Icon && <Icon className="w-3.5 h-3.5 md:w-4 md:h-4 flex-shrink-0" />}
       {children}
     </motion.button>
   )
