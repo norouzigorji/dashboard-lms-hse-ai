@@ -1,0 +1,100 @@
+{
+  "mapMarkers": [
+    {
+      "id": 1,
+      "lat": 35.6892,
+      "lng": 51.3890,
+      "type": "danger",
+      "title": "منطقه پرخطر 1",
+      "description": "سیم لخت و خطر برق گرفتگی",
+      "severity": "high"
+    },
+    {
+      "id": 2,
+      "lat": 35.7000,
+      "lng": 51.4000,
+      "type": "warning",
+      "title": "هشدار منطقه 2",
+      "description": "نیاز به بررسی ایمنی",
+      "severity": "medium"
+    },
+    {
+      "id": 3,
+      "lat": 35.6800,
+      "lng": 51.3800,
+      "type": "danger",
+      "title": "منطقه پرخطر 3",
+      "description": "عدم استفاده از تجهیزات ایمنی",
+      "severity": "high"
+    },
+    {
+      "id": 4,
+      "lat": 35.7100,
+      "lng": 51.4100,
+      "type": "warning",
+      "title": "هشدار منطقه 4",
+      "description": "نیاز به بازرسی",
+      "severity": "medium"
+    }
+  ],
+  "liveFeed": [
+    {
+      "id": 1,
+      "message": "سیم لخت در منطقه A شناسایی شد. نیاز به تعمیر فوری دارد.",
+      "time": "2 دقیقه پیش",
+      "priority": "urgent"
+    },
+    {
+      "id": 2,
+      "message": "گزارش برق گرفتگی در پست برق منطقه B. تیم امداد اعزام شد.",
+      "time": "15 دقیقه پیش",
+      "priority": "urgent"
+    },
+    {
+      "id": 3,
+      "message": "بازرسی ایمنی در انبار مرکزی انجام شد. همه چیز در وضعیت مطلوب است.",
+      "time": "1 ساعت پیش",
+      "priority": "normal"
+    },
+    {
+      "id": 4,
+      "message": "هشدار: عدم استفاده از کلاه ایمنی در منطقه C مشاهده شد.",
+      "time": "2 ساعت پیش",
+      "priority": "high"
+    },
+    {
+      "id": 5,
+      "message": "گزارش سقوط ابزار در منطقه D. هیچ آسیبی گزارش نشده است.",
+      "time": "3 ساعت پیش",
+      "priority": "medium"
+    }
+  ],
+  "riskAnalysis": [
+    {
+      "category": "برق گرفتگی",
+      "count": 12,
+      "color": "#ef4444"
+    },
+    {
+      "category": "سقوط",
+      "count": 8,
+      "color": "#f59e0b"
+    },
+    {
+      "category": "آتش",
+      "count": 5,
+      "color": "#ef4444"
+    },
+    {
+      "category": "سیم لخت",
+      "count": 15,
+      "color": "#ef4444"
+    },
+    {
+      "category": "عدم استفاده از تجهیزات ایمنی",
+      "count": 10,
+      "color": "#f59e0b"
+    }
+  ]
+}
+

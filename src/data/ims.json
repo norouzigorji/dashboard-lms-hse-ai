@@ -1,0 +1,85 @@
+{
+  "isoCompliance": [
+    {
+      "id": "iso9001",
+      "name": "ISO 9001",
+      "percentage": 85,
+      "label": "درصد انطباق 9001 ISO"
+    },
+    {
+      "id": "iso14001",
+      "name": "ISO 14001",
+      "percentage": 92,
+      "label": "درصد انطباق 14001 ISO"
+    },
+    {
+      "id": "iso45001",
+      "name": "ISO 45001",
+      "percentage": 78,
+      "label": "درصد انطباق 45001 ISO"
+    }
+  ],
+  "processes": [
+    {
+      "id": "Req-101",
+      "formNumber": "Req-101",
+      "processType": "درخواست تعمیرات",
+      "requestingUnit": "پست منطقه ۳",
+      "registrationDate": "1402/10/15",
+      "status": "منطبق"
+    },
+    {
+      "id": "Req-102",
+      "formNumber": "Req-102",
+      "processType": "درخواست تعمیرات",
+      "requestingUnit": "پست منطقه ۳",
+      "registrationDate": "1402/10/15",
+      "status": "منطبق"
+    },
+    {
+      "id": "Req-103",
+      "formNumber": "Req-103",
+      "processType": "درخواست تعمیرات",
+      "requestingUnit": "پست منطقه ۳",
+      "registrationDate": "1402/10/14",
+      "status": "منطبق"
+    },
+    {
+      "id": "NCR-205",
+      "formNumber": "NCR-205",
+      "processType": "گزارش عدم انطباق",
+      "requestingUnit": "انبار مرکزی",
+      "registrationDate": "1402/10/14",
+      "status": "عدم انطباق"
+    },
+    {
+      "id": "NCR-206",
+      "formNumber": "NCR-206",
+      "processType": "گزارش عدم انطباق",
+      "requestingUnit": "انبار مرکزی",
+      "registrationDate": "1402/10/13",
+      "status": "عدم انطباق"
+    }
+  ],
+  "bottlenecks": [
+    {
+      "id": 1,
+      "unit": "انبار",
+      "delay": "48 ساعت تاخیر",
+      "message": "هشدار گلوگاه: انبار مرکزی دارای تاخیر 48 ساعته"
+    },
+    {
+      "id": 2,
+      "unit": "پست منطقه 2",
+      "delay": "24 ساعت تاخیر",
+      "message": "هشدار گلوگاه: پست منطقه 2 نیاز به بررسی فوری دارد"
+    },
+    {
+      "id": 3,
+      "unit": "واحد تعمیرات",
+      "delay": "36 ساعت تاخیر",
+      "message": "هشدار گلوگاه: واحد تعمیرات در انتظار تایید"
+    }
+  ]
+}
+

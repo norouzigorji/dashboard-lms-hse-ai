@@ -1,0 +1,33 @@
+{
+  "prediction": {
+    "historical": {
+      "labels": ["سملی", "تاریخی", "غایر", "غام", "گری", "ادار", "بین", "نرد", "نشت"],
+      "values": [50, 65, 70, 68, 72, 75, 78, 80, 82]
+    },
+    "forecast": {
+      "labels": ["پیش"],
+      "values": [85],
+      "confidenceInterval": {
+        "upper": [90],
+        "lower": [80]
+      }
+    }
+  },
+  "prescription": {
+    "risk": "خطر بالا در منطقه ۳",
+    "recommendation": "احتمال خرابی در زون ۳. پیشنهاد: اعزام تیم تعمیرات پیشگیرانه به منطقه ۳ برای بررسی و تعمیر تجهیزات قبل از وقوع خرابی."
+  },
+  "rootCauseAnalysis": [
+    {
+      "factor": "عمر قطعه",
+      "percentage": 70,
+      "color": "#3b82f6"
+    },
+    {
+      "factor": "خستگی",
+      "percentage": 30,
+      "color": "#f97316"
+    }
+  ]
+}
+
